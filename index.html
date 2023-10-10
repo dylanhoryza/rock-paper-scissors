@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sun Planet Moon</title>
+  <link rel="stylesheet" href="assets/reset.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container dark">
+    <div class="row toggle">
+      <div class="mode">
+        <p id="dark">Dark Mode</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="theme-switcher">
+        <span class="slider round"></span>
+      </label>
+      <div class="mode">
+        <p id="light">Light Mode</p>
+      </div>
+    </div>
+    <h1>Sun Planet Moon</h1>
+    <div class="buttons">
+      <button onclick="playGame('sun');"
+      class="move-button">
+      <img src="images/sun-emoji.png" class="move-icon-main">
+    </button>
+    
+    <button onclick="playGame('planet');"
+      class="move-button">
+      <img src="images/planet-emoji.png" class="move-icon-main">
+    </button>
+     
+      <button onclick="playGame('moon');"
+      class="move-button">
+      <img src="images/moon-emoji.png" class="move-icon-main">
+    </button>
+  </div>
+  
+  <p class="js-moves"></p>
+  <p class="js-result"></p>
+  <p class="js-score"></p>
+  
+  <div class = "reset-score-button">
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScore();
+    " class="button-reset"
+  >Reset Score</button>
+  
+  </div>
+  
+  <h2>Rules</h2>
+  <div class="rules">
+    <p class="game-rules">
+      <img src="images/sun-emoji.png" class="move-icon-rules"> Sun consumes Planet in a fiery blaze  <img src="images/planet-emoji.png" class="move-icon-rules">
+      <br>
+      <img src="images/planet-emoji.png" class="move-icon-rules"> Planet controls Moon's orbit <img src="images/moon-emoji.png" class="move-icon-rules">
+      <br>
+      <img src="images/moon-emoji.png" class="move-icon-rules"> Moon eclipses Sun and blocks out its light  <img src="images/sun-emoji.png" class="move-icon-rules">
+    </p>
+  
+  </div>
+  
+
+
+
+  </div>
+  
+
+
+  
+    <script src="script.js"></script>
+
+
+ 
+
+</body>
+
+</html>
